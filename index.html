@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Kalnia:wght@100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <title>Tugas 2-3 | Bootstrap</title>
+    <style>
+        * {
+            font-family: "Libre Baskerville", serif;
+        }
+
+        .mytitle {
+            width: 100%;
+            height: 250px;
+            /*
+            background image dari pt.pngtree.com
+            */
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/originals/7a/81/24/7a81240359e212d40a665222ff3d13aa.jpg');
+            background-position: center;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mytitle>button {
+            width: 200px;
+            height: 50px;
+            background-color: transparent;
+            color: white;
+            border-radius: 50px;
+            border: 1px solid white;
+            margin-top: 10px;
+        }
+
+        .mytitle>button:hover {
+            border: 2px solid rgb(96, 96, 218);
+        }
+
+        .mycards {
+            margin: 20px auto 0px auto;
+            width: 95%;
+            max-width: 1200px;
+        }
+
+        .mycomment {
+            color: gray;
+        }
+
+        .mypost {
+            width: 95%;
+            max-width: 500px;
+            margin: 20px auto 0px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 3px 0px gray;
+        }
+
+        .mybtns {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .mybtns>button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mytitle">
+        <h1>My Favorit Movies</h1>
+        <button>Save a new movie</button>
+    </div>
+
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Enter Movie Url...">
+            <label for="floatingInput">Movie URL</label>
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Stars</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>-- Select a rating --</option>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Comment</label>
+        </div>
+        <div class="mybtns">
+            <button type="button" class="btn btn-dark">Save</button>
+            <button type="button" class="btn btn-outline-dark">Close</button>
+        </div>
+    </div>
+
+    <div class="mycards">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://depostjogja.com/photo/plugin/article/2024/1704267781_1-org.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Agak Laen</h5>
+                        <p class="card-text">Agak Laen adalah komedi horor Indonesia tahun 2024 yang disutradarai dan
+                            ditulis oleh Muhadkly Acho. Film produksi Imajinari serta Jagartha ini dibintangi oleh Bene
+                            Dion, Oki Rengga, dan Indra Jegel. Agak Laen tayang perdana di bioskop Indonesia pada 1
+                            Februari 2024.</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p class="mycomment">Agak laen memang</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://depostjogja.com/photo/plugin/article/2024/1704267781_1-org.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Agak Laen</h5>
+                        <p class="card-text">Agak Laen adalah komedi horor Indonesia tahun 2024 yang disutradarai dan
+                            ditulis oleh Muhadkly Acho. Film produksi Imajinari serta Jagartha ini dibintangi oleh Bene
+                            Dion, Oki Rengga, dan Indra Jegel. Agak Laen tayang perdana di bioskop Indonesia pada 1
+                            Februari 2024.</p>
+                        <p>⭐⭐</p>
+                        <p class="mycomment">.......</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://depostjogja.com/photo/plugin/article/2024/1704267781_1-org.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Agak Laen</h5>
+                        <p class="card-text">Agak Laen adalah komedi horor Indonesia tahun 2024 yang disutradarai dan
+                            ditulis oleh Muhadkly Acho. Film produksi Imajinari serta Jagartha ini dibintangi oleh Bene
+                            Dion, Oki Rengga, dan Indra Jegel. Agak Laen tayang perdana di bioskop Indonesia pada 1
+                            Februari 2024.</p>
+                        <p>⭐⭐⭐⭐</p>
+                        <p class="mycomment">Thebesttt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://depostjogja.com/photo/plugin/article/2024/1704267781_1-org.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Agak Laen</h5>
+                        <p class="card-text">Agak Laen adalah komedi horor Indonesia tahun 2024 yang disutradarai dan
+                            ditulis oleh Muhadkly Acho. Film produksi Imajinari serta Jagartha ini dibintangi oleh Bene
+                            Dion, Oki Rengga, dan Indra Jegel. Agak Laen tayang perdana di bioskop Indonesia pada 1
+                            Februari 2024.</p>
+                        <p>⭐⭐⭐</p>
+                        <p class="mycomment">adaaadajaa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
